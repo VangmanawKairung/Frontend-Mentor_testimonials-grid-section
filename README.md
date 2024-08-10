@@ -4,7 +4,7 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 ## Table of contents
 
-- [Frontend Mentor - Single price grid component solution](#frontend-mentor---single-price-grid-component-solution)
+- [Frontend Mentor - Testimonials grid section solution](#frontend-mentor---testimonials-grid-section-solution)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -13,7 +13,6 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
   - [Author](#author)
   - [Acknowledgments](#acknowledgments)
@@ -24,22 +23,23 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 - The grid component
 - Responsive website
+- Background color with image
 
 ### Screenshot
 
 <details>
 <summary><strong>Mobile View</strong></summary>
-<img src="./result/mobile view.png">
+<img src="source/result/mobile.png">
 </details>
 <details>
 <summary><strong>Descktop View</strong></summary>
-<img src="./result/desktop view.png">
+<img src="source/result/desktop.png">
 </details>
 
 ### Links
 
-- Solution URL: [Single price grid component by HTML and CSS (Sass)](https://www.frontendmentor.io/solutions/single-price-grid-component-by-html-and-css-sass-lko1qj6JDz)
-- Live Site URL: [Social proof section](https://vangmanawkairung.github.io/social-proof-section/)
+- Solution URL: [Testimonials Grid Section with Sass and Grid Layout](https://www.frontendmentor.io/solutions/testimonials-grid-section-with-sass-and-grid-layout-t8Tp_t8ZY7)
+- Live Site URL: [Frontend Mentor | Testimonials Grid Section](https://vangmanawkairung.github.io/Frontend-Mentor_testimonials-grid-section/)
 
 ## My process
 
@@ -53,16 +53,17 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 ### What I learned
 
-- The border radius of grid container have to be set by applying border radius in the border elements
+- How to use the background-color along with background-image.
+- How to handle with grid and its properties.
 
-### Continued development
-
-Since the given design doesn't provide the hover state, so the future work will be handling with the hover state or active state to make the website more responsive.
 
 ### Useful resources
 
 - [grid - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) - This website helps me to handle with the grid display layout
 - [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/) - This website clearifies the grid layout attributes.
+- [gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap) - This website demonstrates how to handle with grid gap.
+- [grid-column](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column) - This website shows how to manage the gird layout.
+- [CSS background-position Property](https://www.w3schools.com/cssref/pr_background-position.php) - The resource describes how to use backpgroud-position property.
 
 ## Author
 
