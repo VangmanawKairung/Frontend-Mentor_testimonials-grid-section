@@ -3,7 +3,7 @@
 
 // Font
 $root-font-family: "Barlow Semi Condensed";
-$rood-font-size: 13px;
+$root-font-size: 13px;
 
 // Screen size
 $mobile-width: 375px;
@@ -23,5 +23,217 @@ $light-grayish-blue: hsl(210, 46%, 95%);
   background-origin: border-box;
   font-weight: 500;
   font-family: $root-font-family;
-  font-size: $rood-font-size;
+  font-size: $root-font-size;
+}
+
+body {
+  background-color: $light-grayish-blue;
+  .container {
+    .blog {
+      padding: 25px 30px 30px 30px;
+      box-shadow: 50px 50px 25px -40px rgba(73, 74, 81, 0.151);
+      border-radius: 10px;
+
+      .user-profile {
+        display: flex;
+        align-items: center;
+
+        z-index: 1;
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 20px;
+          margin-right: 15px;
+        }
+
+        .user-info {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          .user-name {
+            font-weight: 600;
+          }
+
+          .user-status {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    #Daniel {
+      background-color: $moderate-violet;
+      background-image: url(source/images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      color: $white;
+      img {
+        border: 2px solid #a775f1;
+      }
+      .user-info .user-status {
+        color: rgba($color: $white, $alpha: 0.5);
+      }
+      .content .second-content {
+        color: rgba($color: $white, $alpha: 0.7);
+      }
+    }
+
+    #Jonathan {
+      background-color: $very-dark-grayish-blue;
+      color: $white;
+      img {
+        border: 2px solid $light-gray;
+      }
+      .user-info .user-status {
+        color: rgba($color: $white, $alpha: 0.5);
+      }
+      .content .second-content {
+        color: rgba($color: $white, $alpha: 0.7);
+      }
+    }
+
+    #Jeanette,
+    #Kira {
+      background-color: $white;
+      color: $very-dark-grayish-blue;
+      img {
+        border: 2px solid $white;
+      }
+      .user-info .user-status {
+        color: rgba($color: $very-dark-grayish-blue, $alpha: 0.5);
+      }
+      .content .second-content {
+        color: rgba($color: $very-dark-grayish-blue, $alpha: 0.7);
+      }
+    }
+
+    #Patrick {
+      color: $white;
+      background-color: $very-dark-blackish-blue;
+      img {
+        border: 2px solid $moderate-violet;
+      }
+      .user-info .user-status {
+        color: rgba($color: $white, $alpha: 0.5);
+      }
+      .content .second-content {
+        color: rgba($color: $white, $alpha: 0.7);
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 1439px) {
+  body {
+    .container {
+      width: 375px;
+      margin: 0 auto;
+      padding: 70px 25px;
+
+      .blog {
+        margin-bottom: 25px;
+
+        .user-profile {
+          margin-bottom: 20px;
+        }
+
+        .content {
+          .first-content {
+            margin-bottom: 20px;
+            font-size: 1.87rem;
+          }
+          .second-content {
+            line-height: 1.6rem;
+            font-size: 1.252rem;
+            word-spacing: 0.2px;
+          }
+        }
+      }
+
+      .blog:last-child {
+        margin-bottom: 0;
+      }
+
+      #Daniel {
+        background-position: 90% 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+
+      display: grid;
+      grid-template-columns: repeat(4, 255px);
+      grid-template-rows: repeat(2, 280px);
+      gap: 30px 25px;
+
+      .blog {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .user-profile {
+          height: fit-content;
+          margin-bottom: 20px;
+        }
+
+        .content {
+          height: calc(100% - 35px);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .first-content {
+            font-size: 1.57rem;
+          }
+
+          .second-content {
+            font-size: 1.01rem;
+            line-height: 1.3rem;
+          }
+        }
+      }
+
+      #Daniel {
+        grid-column: 1/3;
+        grid-row: 1;
+        background-position: 80% 0;
+      }
+
+      #Jonathan {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      #Jeanette {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      #Patrick {
+        grid-column: 2/4;
+        grid-row: 2;
+      }
+
+      #Kira {
+        grid-column: 4;
+        grid-row: 1/3;
+
+        .content {
+          .second-content {
+            line-height: 1.4rem;
+          }
+        }
+      }
+    }
+  }
 }
