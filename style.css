@@ -1,187 +1,112 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  background-origin: border-box;
-  font-weight: 500;
+  box-sizing: border-box;
   font-family: "Barlow Semi Condensed";
   font-size: 13px;
+  font-weight: 500;
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   background-color: hsl(210, 46%, 95%);
 }
-body .container .blog {
-  padding: 25px 30px 30px 30px;
-  box-shadow: 50px 50px 25px -40px rgba(73, 74, 81, 0.151);
-  border-radius: 10px;
+body main {
+  width: 327px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 70px 0 40px 0;
 }
-body .container .blog .user-profile {
+body main section.blog header.user-profile {
   display: flex;
   align-items: center;
-  z-index: 1;
+  margin-bottom: 18px;
 }
-body .container .blog .user-profile img {
+body main section.blog header.user-profile img {
   width: 32px;
   height: 32px;
-  border-radius: 20px;
+  border-radius: 50%;
   margin-right: 15px;
 }
-body .container .blog .user-profile .user-info {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-body .container .blog .user-profile .user-info .user-name {
+body main section.blog header.user-profile div.user-info h2.user-name {
   font-weight: 600;
 }
-body .container .blog .user-profile .user-info .user-status {
+body main section.blog header.user-profile div.user-info h3.user-status {
   font-size: 0.9rem;
 }
-body .container #Daniel {
+body main section.blog article.content p.user-experience-summary {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+body main section.blog article.content blockquote.user-testimonial {
+  line-height: 1.4rem;
+  letter-spacing: 0.05px;
+}
+body main .blog {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 24px 31px 30px 31px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+body main .blog .user-profile .user-info .user-status,
+body main .blog .content .user-testimonial {
+  color: hsl(0, 0%, 81%);
+}
+body main #Daniel-blog {
   background-color: hsl(263, 55%, 52%);
-  background-image: url(source/images/bg-pattern-quotation.svg);
+  background-image: url(./sources/images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
-  color: hsl(0, 0%, 100%);
+  background-position: top right 25px;
 }
-body .container #Daniel img {
-  border: 2px solid #a775f1;
+body main #Daniel-blog img {
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
-body .container #Daniel .user-info .user-status {
+body main #Daniel-blog .user-profile .user-info .user-status,
+body main #Daniel-blog .content .user-testimonial {
   color: rgba(255, 255, 255, 0.5);
 }
-body .container #Daniel .content .second-content {
-  color: rgba(255, 255, 255, 0.7);
-}
-body .container #Jonathan {
+body main #Jonathan-blog {
   background-color: hsl(217, 19%, 35%);
-  color: hsl(0, 0%, 100%);
 }
-body .container #Jonathan img {
-  border: 2px solid hsl(0, 0%, 81%);
+body main #Jonathan-blog img {
+  border: 2px solid hsl(217, 19%, 35%);
 }
-body .container #Jonathan .user-info .user-status {
-  color: rgba(255, 255, 255, 0.5);
-}
-body .container #Jonathan .content .second-content {
-  color: rgba(255, 255, 255, 0.7);
-}
-body .container #Jeanette,
-body .container #Kira {
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(217, 19%, 35%);
-}
-body .container #Jeanette img,
-body .container #Kira img {
-  border: 2px solid hsl(0, 0%, 100%);
-}
-body .container #Jeanette .user-info .user-status,
-body .container #Kira .user-info .user-status {
-  color: rgba(72, 85, 106, 0.5);
-}
-body .container #Jeanette .content .second-content,
-body .container #Kira .content .second-content {
-  color: rgba(72, 85, 106, 0.7);
-}
-body .container #Patrick {
-  color: hsl(0, 0%, 100%);
+body main #Patrick-blog {
   background-color: hsl(219, 29%, 14%);
 }
-body .container #Patrick img {
+body main #Patrick-blog img {
   border: 2px solid hsl(263, 55%, 52%);
 }
-body .container #Patrick .user-info .user-status {
-  color: rgba(255, 255, 255, 0.5);
+body main #Daniel-blog .user-profile .user-info .user-name,
+body main #Daniel-blog .content .user-experience-summary,
+body main #Jonathan-blog .user-profile .user-info .user-name,
+body main #Jonathan-blog .content .user-experience-summary,
+body main #Patrick-blog .user-profile .user-info .user-name,
+body main #Patrick-blog .content .user-experience-summary {
+  color: hsl(0, 0%, 100%);
 }
-body .container #Patrick .content .second-content {
-  color: rgba(255, 255, 255, 0.7);
+body main #Jeanette-blog,
+body main #Kira-blog {
+  background-color: hsl(0, 0%, 100%);
 }
-
-@media (min-width: 375px) and (max-width: 1439px) {
-  body .container {
-    width: 375px;
-    margin: 0 auto;
-    padding: 70px 25px;
-  }
-  body .container .blog {
-    margin-bottom: 25px;
-  }
-  body .container .blog .user-profile {
-    margin-bottom: 20px;
-  }
-  body .container .blog .content .first-content {
-    margin-bottom: 20px;
-    font-size: 1.87rem;
-  }
-  body .container .blog .content .second-content {
-    line-height: 1.6rem;
-    font-size: 1.252rem;
-    word-spacing: 0.2px;
-  }
-  body .container .blog:last-child {
-    margin-bottom: 0;
-  }
-  body .container #Daniel {
-    background-position: 90% 0;
-  }
+body main #Jeanette-blog img,
+body main #Kira-blog img {
+  border: 2px solid hsl(0, 0%, 100%);
 }
-@media (min-width: 1440px) {
-  body .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    display: grid;
-    grid-template-columns: repeat(4, 255px);
-    grid-template-rows: repeat(2, 280px);
-    gap: 30px 25px;
-  }
-  body .container .blog {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  body .container .blog .user-profile {
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-bottom: 20px;
-  }
-  body .container .blog .content {
-    height: calc(100% - 35px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  body .container .blog .content .first-content {
-    font-size: 1.57rem;
-  }
-  body .container .blog .content .second-content {
-    font-size: 1.01rem;
-    line-height: 1.3rem;
-  }
-  body .container #Daniel {
-    grid-column: 1/3;
-    grid-row: 1;
-    background-position: 80% 0;
-  }
-  body .container #Jonathan {
-    grid-column: 3;
-    grid-row: 1;
-  }
-  body .container #Jeanette {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  body .container #Patrick {
-    grid-column: 2/4;
-    grid-row: 2;
-  }
-  body .container #Kira {
-    grid-column: 4;
-    grid-row: 1/3;
-  }
-  body .container #Kira .content .second-content {
-    line-height: 1.4rem;
-  }
+body main #Jeanette-blog .user-profile .user-info .user-name,
+body main #Jeanette-blog .content .user-experience-summary,
+body main #Kira-blog .user-profile .user-info .user-name,
+body main #Kira-blog .content .user-experience-summary {
+  color: hsl(219, 29%, 14%);
+}
+body main #Jeanette-blog .user-profile .user-info .user-status,
+body main #Jeanette-blog .content .user-testimonial,
+body main #Kira-blog .user-profile .user-info .user-status,
+body main #Kira-blog .content .user-testimonial {
+  color: rgba(72, 85, 106, 0.5);
 }
