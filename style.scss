@@ -11,6 +11,18 @@ $very-dark-blackish-blue: hsl(219, 29%, 14%);
 $light-gray: hsl(0, 0%, 81%);
 $light-grayish-blue: hsl(210, 46%, 95%);
 
+@mixin blog-theme($name-color, $status-color) {
+  .user-profile .user-info .user-name,
+  .content .user-experience-summary {
+    color: $name-color;
+  }
+
+  .user-profile .user-info .user-status,
+  .content .user-testimonial {
+    color: $status-color;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +47,7 @@ body {
       header.user-profile {
         display: flex;
         align-items: center;
-        margin-bottom: 18px;
+        margin-bottom: 17px;
 
         img {
           width: 32px;
@@ -58,27 +70,30 @@ body {
       article.content {
         p.user-experience-summary {
           font-weight: 600;
-          font-size: 1.5rem;
-          margin-bottom: 18px;
-          letter-spacing: 0.3px;
+          font-size: 1.47rem;
+          margin-bottom: 19px;
+          letter-spacing: 0.4px;
+          line-height: 1.8rem;
         }
 
         blockquote.user-testimonial {
-          line-height: 1.4rem;
-          letter-spacing: 0.05px;
+          line-height: 1.36rem;
         }
       }
     }
 
     .blog {
       height: fit-content;
-      padding: 24px 31px 30px 31px;
+      padding: 24px 32px 30px 31px;
       border-radius: 8px;
       margin-bottom: 24px;
 
+      box-shadow: 10px 10px 20px 5px
+        rgba($color: $very-dark-blackish-blue, $alpha: 0.1);
+
       .user-profile .user-info .user-status,
       .content .user-testimonial {
-        color: $light-gray;
+        color: rgba($white, 0.6);
       }
     }
 
@@ -92,9 +107,8 @@ body {
         border: 2px solid rgba($white, 0.5);
       }
 
-      .user-profile .user-info .user-status,
-      .content .user-testimonial {
-        color: rgba($white, 0.5);
+      blockquote.user-testimonial {
+        padding-right: 17px;
       }
     }
 
@@ -112,15 +126,16 @@ body {
       img {
         border: 2px solid $moderate-violet;
       }
+
+      blockquote.user-testimonial {
+        letter-spacing: 0.1px;
+      }
     }
 
     #Daniel-blog,
     #Jonathan-blog,
     #Patrick-blog {
-      .user-profile .user-info .user-name,
-      .content .user-experience-summary {
-        color: $white;
-      }
+      @include blog-theme($white, rgba($white, 0.6));
     }
 
     #Jeanette-blog,
@@ -130,14 +145,70 @@ body {
         border: 2px solid $white;
       }
 
-      .user-profile .user-info .user-name,
-      .content .user-experience-summary {
-        color: $very-dark-blackish-blue;
+      @include blog-theme(
+        $very-dark-blackish-blue,
+        rgba($very-dark-grayish-blue, 0.6)
+      );
+    }
+
+    #Kira-blog {
+      blockquote.user-testimonial {
+        letter-spacing: 0.05px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    main {
+      width: 1110px;
+      height: 572px;
+      margin: 0;
+      padding: 0;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 24px 30px;
+
+      .blog {
+        margin: 0;
+        width: 100%;
+        height: 100%;
       }
 
-      .user-profile .user-info .user-status,
-      .content .user-testimonial {
-        color: rgba($very-dark-grayish-blue, 0.5);
+      #Daniel-blog {
+        background-position: top right 80px;
+        grid-column: 1 / span 2;
+
+        blockquote.user-testimonial {
+          padding-right: 0;
+        }
+      }
+
+      #Jonathan-blog {
+        grid-column: 3;
+      }
+
+      #Jeanette-blog {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      #Patrick-blog {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+      }
+
+      #Kira-blog {
+        grid-column: 4;
+        grid-row: 1 / span 2;
       }
     }
   }
