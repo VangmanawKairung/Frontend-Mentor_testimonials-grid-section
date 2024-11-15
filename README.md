@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend-Mentor_testimonials-grid-section](https://github.com/VangmanawKairung/Frontend-Mentor_testimonials-grid-section)
+- Solution URL: [Testimonials Grid Section with Sass and Grid Layout](https://www.frontendmentor.io/solutions/testimonials-grid-section-with-sass-and-grid-layout-t8Tp_t8ZY7)
 - Live Site URL: [Frontend Mentor | Testimonials Grid Section](https://vangmanawkairung.github.io/Frontend-Mentor_testimonials-grid-section/)
 
 ## My process
